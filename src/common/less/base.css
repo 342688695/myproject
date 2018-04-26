@@ -1,0 +1,11 @@
+button {
+  padding: 0;
+}
+input,
+div,
+a,
+li {
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
