@@ -23,7 +23,7 @@
           <span><i class="iconfont icon-wucan"></i>{{this.brefastList.name}}</span><i class="iconfont icon-return-copy"></i>
         </div>
         <ul class="brefast-ul">
-          <li v-for="item in brefastList.list" class="brefast-li">
+          <li :key="item.id" v-for="item in brefastList.list" class="brefast-li">
              <img :src="item.smallpic" class="brefast-imgs">
              <p class="brefast-name">{{item.title}}</p>
              <p class="brefast-time">{{item.adddate}}</p>
@@ -36,7 +36,7 @@
           <span><i class="iconfont icon-jiankang"></i>{{this.childList.name}}</span><i class="iconfont icon-return-copy"></i>
         </div>
         <ul class="child-ul">
-          <li v-for="item in this.childList.list" class="child-li">
+          <li :key="item.id" v-for="item in this.childList.list" class="child-li">
             <div class="left-wrapper"><img :src="item.smallpic" class="child-imgs"></div>
             <div class="right-wrapper">
               <p class="right-title">{{item.title}}</p>
@@ -51,7 +51,7 @@
           <span><i class="iconfont icon-ketang"></i>{{this.classList.name}}</span><i class="iconfont icon-return-copy"></i>
         </div>
         <ul class="child-ul">
-          <li v-for="item in this.classList.list" class="child-li">
+          <li :key="item.id" v-for="item in this.classList.list" class="child-li">
             <div class="left-wrapper"><img :src="item.smallpic" class="child-imgs"></div>
             <div class="right-wrapper">
               <p class="right-title">{{item.title}}</p>
@@ -66,7 +66,7 @@
           <span><i class="iconfont icon-jianshen"></i>{{this.sportList.name}}</span><i class="iconfont icon-return-copy"></i>
         </div>
         <ul class="child-ul">
-          <li v-for="item in this.sportList.list" class="child-li">
+          <li :key="item.id" v-for="item in this.sportList.list" class="child-li">
             <div class="left-wrapper"><img :src="item.smallpic" class="child-imgs"></div>
             <div class="right-wrapper">
               <p class="right-title">{{item.title}}</p>

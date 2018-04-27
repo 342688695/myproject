@@ -8,7 +8,7 @@
           <div class="store-detail">
             <div class="detail-title"><div class="title-line"></div><div class="title-circle"></div>积分商城<div class="title-circle"></div><div class="title-line"></div></div>
             <ul class="detail-ul">
-              <li class="detail-li" v-for="good in goodList" @click="selectItem(good)">
+              <li class="detail-li" :key="good.id" v-for="good in goodList" @click="selectItem(good)">
                 <img v-lazy="good.banner" class="detail-img">
                 <p class="detail-goods">{{good.name}}</p>
                 <p class="detail-count"><i class="iconfont icon-jifenshangcheng"></i><span class="count-ing">{{good.integral}}</span>积分</p>

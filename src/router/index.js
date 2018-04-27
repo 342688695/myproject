@@ -1,18 +1,74 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Message from '@/components/message/message'
-import Target from '@/components/target/target'
-import Test from '@/components/test/test'
-import Baby from '@/components/baby/baby'
-import Card from '@/components/card/card'
-import Hotkey from '@/components/hotKey/hotKey'
-import Fouce from '@/components/fouce/fouce'
-import Store from '@/components/store/store'
-import Index from '@/components/index/index'
-import Login from '@/components/login/login'
-import Storedetail from '@/components/storeDetail/storeDetail'
-import Sharedetail from '@/components/shareDetail/shareDetail'
-import Share from '@/components/share/share'
+
+const Message = resolve => {
+  import('@/components/message/message').then(module => {
+    resolve(module)
+  })
+}
+
+const Target = resolve => {
+  import('@/components/target/target').then(module => {
+    resolve(module)
+  })
+}
+const Test = resolve => {
+  import('@/components/test/test').then(module => {
+    resolve(module)
+  })
+}
+const Baby = resolve => {
+  import('@/components/baby/baby').then(module => {
+    resolve(module)
+  })
+}
+const Card = resolve => {
+  import('@/components/card/card').then(module => {
+    resolve(module)
+  })
+}
+
+const Hotkey = resolve => {
+  import('@/components/hotKey/hotKey').then(module => {
+    resolve(module)
+  })
+}
+const Fouce = resolve => {
+  import('@/components/fouce/fouce').then(module => {
+    resolve(module)
+  })
+}
+const Store = resolve => {
+  import('@/components/store/store').then(module => {
+    resolve(module)
+  })
+}
+const Index = resolve => {
+  import('@/components/index/index').then(module => {
+    resolve(module)
+  })
+}
+const Login = resolve => {
+  import('@/components/login/login').then(module => {
+    resolve(module)
+  })
+}
+const Storedetail = resolve => {
+  import('@/components/storeDetail/storeDetail').then(module => {
+    resolve(module)
+  })
+}
+const Sharedetail = resolve => {
+  import('@/components/shareDetail/shareDetail').then(module => {
+    resolve(module)
+  })
+}
+const Share = resolve => {
+  import('@/components/share/share').then(module => {
+    resolve(module)
+  })
+}
+
 Vue.use(Router)
 
 export default new Router({

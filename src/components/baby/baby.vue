@@ -5,7 +5,7 @@
       <img :src="this.baseData.headPic" class="info-img"><span class="info-name">{{this.baseData.userInfo?this.baseData.userInfo.nickname:''}}</span>
      </div>
       <ul class="mine-ul">
-        <li v-for="item in mineList" class="mine-li">
+        <li v-for="(item, index) in mineList" :key="index" class="mine-li">
           <img :src="item.iconUrl" class="li-img">
           <div class="li-div">
             <span>{{item.name}}</span>

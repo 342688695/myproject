@@ -1,7 +1,7 @@
 <template>
   <div class="message-wrapper" ref="wrapper">
     <ul class="messgae-ul">
-        <li v-for="item in messageList" class="message-li">
+        <li :key="item.id" v-for="item in messageList" class="message-li">
           <img :src="item.img" class="message-img">
           <div class="message-div">
             <div class="message-word">

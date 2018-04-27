@@ -15,7 +15,7 @@
             <span class="detail-theme">#{{list.clockintitle}}#</span>{{list.content}}
           </div>
           <div class="content-img">
-            <img :src="imgList" :class="list.imgthumb.length>1?'three-imgs':'one-img'" v-for="imgList in list.imgthumb">
+            <img :src="imgList" :class="list.imgthumb.length>1?'three-imgs':'one-img'" :key="index" v-for="(imgList, index) in list.imgthumb">
           </div>
           <div class="content-icon">
             <span class="icon-span" @click="clickpraise(index)"><i class="iconfont icon-dianzan" :class="list.praisestatus==='0'?'active':''"></i>{{list.praise}}</span>

@@ -56,7 +56,7 @@
         </div>
         <div class="share-detail" ref="shareWrapper">
           <ul class="detail-ul" ref="shareGroup">
-            <li class="share-li" v-for="share in shareList">
+            <li class="share-li" :key="share.id" v-for="share in shareList">
               <img v-lazy="share.banner" alt="滚动分享图片" class="img-list">
               <p class="share-topic">#{{share.title}}#</p>
               <p class="share-content">{{share.content}}</p>
@@ -78,7 +78,7 @@
         </div>
         <div class="hot-topic" ref="hotTopic">
           <ul class="topic-ul" ref="topicUl">
-            <li class="topic-li" v-for="topic in topicList">
+            <li class="topic-li" :key="topic.id" v-for="topic in topicList">
               <img v-lazy="topic.banner" alt="热门图片" class="img-list">
               <span class="topic-title">{{topic.title}}</span>
             </li>
